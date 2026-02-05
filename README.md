@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# User Management CRUD Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React + TypeScript based CRUD (Create, Read, Update, Delete) application for managing user data.  
+The application is designed with **future extensibility** in mind, allowing new fields to be added with minimal code changes.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tech Stack
 
-### `npm start`
+- React (Create React App)
+- TypeScript
+- Material UI
+- Axios
+- JSON Server (Mock API)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📋 Features
 
-### `npm test`
+- Create, Read, Update, and Delete users
+- Form validation with required field enforcement
+- Configuration-driven form and table rendering
+- Clean and user-friendly UI
+- Easily extensible architecture for future fields
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Setup Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the repository
+```bash
+git clone <your-github-repository-url>
+cd react-crud-app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Install dependencies
+```bash
+npm install
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. Start the mock API (JSON Server)
+```bash
+npx json-server --watch db.json --port 3001
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 4. Start the React application
+```bash
+npm start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Adding New Fields
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application uses a configuration-driven approach.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To add a new field (e.g., Date of Birth):
+1. Add the field to the `User` interface in `types.ts`
+2. Add a new entry to the `formFields` array in `App.tsx`
+
+The form and table automatically update without modifying any UI components.
