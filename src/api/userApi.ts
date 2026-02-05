@@ -2,7 +2,8 @@ import axios from "axios";
 import { User } from "../types";
 
 // Use your online MockAPI URL here
-const API_URL = "https://63fxxxx.mockapi.io/users";
+const API_URL = "https://63f1c3a0b0c7d7d4.mockapi.io/users";
+
 
 export const getUsers = async (): Promise<User[]> => {
   try {
